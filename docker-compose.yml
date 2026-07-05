@@ -1,0 +1,13 @@
+services:
+  jenkins:
+    build: .
+    container_name: jenkins-multibranch-tp
+    ports:
+      - "8080:8080"      # interface web de Jenkins (et Blue Ocean)
+      - "50001:50000"    # communication avec les agents (optionnel)
+    volumes:
+      - jenkins-data:/var/jenkins_home
+    restart: unless-stopped
+
+volumes:
+  jenkins-data:

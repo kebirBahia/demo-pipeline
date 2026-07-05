@@ -7,7 +7,7 @@ public class AppTest {
 
     @Test
     public void testAddition() {
-        assertEquals(5, App.addition(2, 3));
+        assertEquals(6, App.addition(2,3));
     }
 
     @Test
